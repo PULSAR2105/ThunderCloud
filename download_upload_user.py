@@ -6,7 +6,8 @@ import time
 import sys
 import os
 
-def query_upload_user(client, infos_client) :
+#Repatriation of the requested file :
+def query_download_user(client, infos_client) :
     #Recovery of connection informations :
     ip = infos_client[0]
     port = str(infos_client[1])
@@ -70,7 +71,7 @@ def query_upload_user(client, infos_client) :
     client.close()
     #--------------------
 
-def upload_user() :
+def download_user() :
     host = ""
     port = 12800
     threads_clients = []
@@ -78,7 +79,7 @@ def upload_user() :
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.bind((host, port))
     server.listen(5)
-    print(time.strftime(">> [%H:%M] The server listen on the port : " + str(port)))
+    print(time.strftime(">> [%H:%M] The server 'download_user' listen on the port : " + str(port)))
     
     while True :
         client, infos_client = server.accept()

@@ -6,7 +6,9 @@ import time
 import sys
 import os
 
-#Receiving a file from another user :
+#DOWNLOAD : 
+
+#To receiving a file from another user :
 def query_download_other_user(client, infos_client) :
     #Opening of log file :
     log = open("logs/download_other_user.txt", "a")
@@ -80,7 +82,7 @@ def query_download_other_user(client, infos_client) :
 def download_other_user() :
     #Starting of server :
     host = ""
-    port = 12800
+    port = 12804
     threads_clients = []
 
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -97,7 +99,3 @@ def download_other_user() :
         threads_clients.append(threading.Thread(None, query_download_other_user, None, (client, infos_client), {}))
         threads_clients[-1].start()
     #-------------------------------
-
-def exit() :
-    server.close()
-
