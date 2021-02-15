@@ -1,0 +1,7 @@
+>> [15/02/21 - 14:23] The server listen on the port : 12800
+[14:23] Server instance ready for 127.0.0.1 : 57363
+[14:23] Ok : 'serveur.py' [1.79 Ko]
+[14:23] The download will be start.
+[14:23] Download is current...
+[14:23] Download is complete.
+[14:23] Closing connection with 127.0.0.1 : 57363
